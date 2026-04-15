@@ -287,3 +287,14 @@ def run_analysis(base_dir: str):
     else:
         print("\n[!] No search queries found in WAL file")
     return search_queries
+
+# python your_script.py /path/to/data
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) < 2:
+        print(f"Usage: {sys.argv[0]} <base_directory>")
+        sys.exit(1)
+
+    base_dir = sys.argv[1]
+    run_analysis(base_dir)
